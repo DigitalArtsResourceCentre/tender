@@ -132,22 +132,22 @@ table {
 
 @font-face {
   font-family: Recursive;
-  src: url(fonts/Recursive.ttf);
+  src: url(home/fonts/Recursive.ttf);
 }
 
 @font-face {
   font-family: IBMPlexSans-Bold;
-  src: url(fonts/IBMPlexSans-Bold.ttf);
+  src: url(home/fonts/IBMPlexSans-Bold.ttf);
 }
 
 @font-face {
   font-family: IBMPlexSans-Italic;
-  src: url(fonts/IBMPlexSans-Italic.ttf);
+  src: url(home/fonts/IBMPlexSans-Italic.ttf);
 }
 
 @font-face {
   font-family: IBMPlexSans-Regular;
-  src: url(fonts/IBMPlexSans-Regular.ttf);
+  src: url(home/fonts/IBMPlexSans-Regular.ttf);
 }
 
 :root {
@@ -830,6 +830,8 @@ footer {
 	width: 20rem;
 	height: 20rem;
   animation-play-state: paused;
+  opacity: .9;
+
 }
 
 .item img{
@@ -912,7 +914,14 @@ footer {
 @media(any-hover: hover){
 	.item:hover{
 		z-index: 10;
-    background: yellow;
+    width: 21rem;
+    width: 21rem;
+    opacity: 1;
+    transition: all 3s ease-in-out;
+
+
+    
+    /* background: yellow; */
 		animation-play-state: paused !important;
 	}
 
