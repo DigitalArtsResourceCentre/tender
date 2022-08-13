@@ -1664,7 +1664,7 @@ footer {
 /*****   Index    ******/
 /***********************/
 
-.resistance {
+/* .resistance {
   background-color: rgba(255, 255, 0, 0.304);
 }
 
@@ -1694,7 +1694,7 @@ footer {
 
 .spheres {
   background-color: rgba(76, 0, 130, 0.342);
-}
+} */
 
 .indexTypeContainer{
   display:flex;
