@@ -1,0 +1,68 @@
+@property --start {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 10px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  font: 100%/1.4 system-ui;
+  padding: 2rem;
+}
+p {
+  max-width: 320px;
+}
+#cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: repeating-linear-gradient(45deg, #5500ff, #4800ff var(--start), transparent var(--start), transparent var(--end, 20px));
+  animation: cover 10s linear infinite;
+}
+@keyframes cover {
+  to {
+    --start: 20px;
+ }
+}
+
+
+
+
+
+SOLID LINES
+
+/* * {
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  font: 100%/1.4 system-ui;
+  padding: 2rem;
+}
+p {
+  max-width: 320px;
+}
+#cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: repeating-linear-gradient(45deg, #ff8a00, #ff8a00 10px, transparent 10px, transparent 20px);
+  animation: cover 10s infinite;
+}
+@keyframes cover {
+  to {
+    background-image: repeating-linear-gradient(45deg, #ff8a00, #ff8a00 20px, transparent 20px, transparent 20px);
+ }
+} */

@@ -71,6 +71,8 @@ let animRight = ["right1", "right2", "right3", "right4", "right5", "right6"];
 let animDown = ["down1", "down2", "down3", "down4", "down5", "down6"];
 let animUp = ["up1", "up2", "up3", "up4", "up5", "up6"];
 
+// let random80s = [400, 600, 700, 840, 850, 860, 870, 880, 1000];
+
 let random80s = [40, 60, 70, 84, 85, 86, 87, 88, 100];
 // let random80s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // let random0s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];

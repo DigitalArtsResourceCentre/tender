@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  background:rgb(166, 125, 255);
+  /* display: grid; */
+  /* gap: var(--g); */
+  width: 100vw;
+  height: 100vh;
+}
+
+body:has(.one:checked):has(.two:checked):has(.three:checked) .message::after {
+  content: "You've won! How does it feel?";
+}
+
+.check {
+  width:50px;
+  height:50px;
+  position:absolute;
+  opacity:0;
+}
+
+.path1{
+  stroke-dasharray:400;
+  stroke-dashoffset:400;
+  transition:.5s all;
+}
+.path2{
+  stroke-dasharray:1800;
+  stroke-dashoffset:1800;
+  transition:.5s all;
+}
+.check:checked + label svg g path {
+  stroke-dashoffset:0;
+}
