@@ -79,7 +79,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         p.setup = () => {
-            p.createCanvas(containerElement.clientWidth, containerElement.clientHeight);
+            const renderer = p.createCanvas(containerElement.clientWidth, containerElement.clientHeight);
+
+            renderer.elt.addEventListener("touchstart", function (event) { event.preventDefault() })
+            renderer.elt.addEventListener("touchmove", function (event) { event.preventDefault() })
+            renderer.elt.addEventListener("touchend", function (event) { event.preventDefault() })
+            renderer.elt.addEventListener("touchcancel", function (event) { event.preventDefault() })
+
             p.background(220);
 
             for (let i = 0; i < 1000; i++) {
