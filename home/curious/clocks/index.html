@@ -38,7 +38,7 @@
         <figure>
           <img src="../../images/inkImages/top-right-logo.png" id="indexImage"
             alt="A brown watercolour painting in the shape of a backwards b" />
-          <figcaption id="siteName">Tender Circuits</figcaption>
+          <!-- <figcaption id="siteName">Tender Circuits</figcaption> -->
         </figure>
       </a>
     </div>
@@ -46,11 +46,22 @@
 
   <main class="container">
     <div class="contentContainer">
+
+      <div id="wrap">
+        <svg id="ellipse" version="1.1" viewBox="0 0 1000 1000">
+        <path id="thePath" fill="transparent" d="M100,500A400,400 0 0 0 900 500 A400,400 0 0 0 100 500"  />
+           <text stroke="white" fill="white">
+              <textPath xlink:href="#thePath" dy="5" id="tp" lengthAdjust="spacingAndGlyphs"> who told you there's no time? • who told you there's no time? • who told you there's no time? •</textPath>
+            </text>
+        </svg>
+    </div>
+
       <canvas></canvas>
       
       </div>
 
     </main>
+    <script type="text/javascript" src="marquee.js"></script>
   <script type="text/javascript" src="play.js"></script>
 </body>
 </html>

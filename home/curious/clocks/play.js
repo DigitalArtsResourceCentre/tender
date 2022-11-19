@@ -1,18 +1,21 @@
 var canvas = document.querySelector( 'canvas' );
 var context = canvas.getContext( '2d' );
 
+let rotationSpeed = 0.9;
+
+
 var step = 0;
 var colorIndex = -1;
 var colors = [
-  [ '#fff', '#111' ],
-  [ '#e37169', '#26282a' ],
-  [ '#eed87b', '#28292b' ],
-  [ '#0d5b5c', '#e6e6e6' ],
-  [ '#d4e8e1', '#e24c68' ],
-  [ '#fbfc65', '#1666bd' ],
-  [ '#4f3a4b', '#e55256' ],
-  [ '#f3c8ed', '#1790d0' ],
-  [ '#111', '#fff' ]
+  [ '#5f0c56', '#964ec9' ],
+  [ '#101e62', '#7675e7' ],
+  // [ '#f9844a', '#e6e6e6' ],
+  // [ '#f9c74f', '#e24c68' ],
+  // [ '#90be6d', '#1666bd' ],
+  // [ '#43aa8b', '#e55256' ],
+  // [ '#4d908e', '#1790d0' ],
+  // [ '#577590', '#1790d0' ],
+  [ '#277da1', '#1790d0' ]
 ];
 
 document.ontouchstart = color;
@@ -22,10 +25,12 @@ color();
 boom();
 
 function color() {
-
+  console.log(rotationSpeed);
+  // rotationSpeed = 0;
+  console.log(rotationSpeed);
   colorIndex = ( ++colorIndex ) % colors.length;
   canvas.style.backgroundColor = colors[colorIndex][0];
-
+  // boom();
 }
 
 function boom() {
@@ -46,14 +51,14 @@ function boom() {
   canvas.height = height;
 
   // Cell size + spacing
-  var cellSize = vmin * 10;
+  var cellSize = vmin * 18;
   var cellSpacing = cellSize * 0.3;
   var cellSizeWithSpacing = cellSize + cellSpacing;
 
   // Clock hands
   var longHandLength = cellSize * 0.4;
   var shortHandLength = cellSize * 0.25;
-  var thickness = Math.round( longHandLength / 8 );
+  var thickness = Math.round( longHandLength / 18 );
 
   // Margin around the screen edge
   var margin = vmin;
@@ -83,7 +88,7 @@ function boom() {
       var distanceFromCenter = Math.sqrt( dx*dx + dy*dy ) / Math.min( width, height );
 
       var rotationOffset = distanceFromCenter * 4;
-      var rotationSpeed = 0.05;
+      var rotationSpeed = 0.009;
 
       // Move to cell
       context.save();
