@@ -577,7 +577,7 @@ header {
   #indexImage {
     z-index: 999;
     /* position: static; */
-    width: 3.5rem;
+    width: 1.5rem;
   }
 }
 
