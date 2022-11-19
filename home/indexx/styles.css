@@ -100,10 +100,12 @@ head::after {
 }
 
 
+
 .indexItem,
 .indexType {
   color: pink;
   z-index: 22;
+  position: relative;
 }
 
 /* .indexItem,
