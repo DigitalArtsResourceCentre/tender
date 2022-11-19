@@ -1,5 +1,5 @@
 button.addEventListener("click", () => {
-    area.insertAdjacentHTML("afterBegin", `<div class="thing">Thing</div>`);
+    area.insertAdjacentHTML("afterBegin", `<div class="thing">stuff</div>`);
   });
   
   area.addEventListener("click", (e) => {

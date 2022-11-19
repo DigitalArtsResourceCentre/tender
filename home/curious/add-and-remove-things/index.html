@@ -1,60 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../../../styles.css" rel="stylesheet" type="text/css" />
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <title>Map</title>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="../../../styles.css" rel="stylesheet" type="text/css" />
-  <link href="styles.css" rel="stylesheet" type="text/css" />
-  <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet" />
-  <title>Map</title>
+    <meta name="author" content="Marie Claire LeBlanc Flanagan" />
+    <meta name="description" content="DESCRIPTIONGOESHERE" />
 
-  <meta name="author" content="Marie Claire LeBlanc Flanagan" />
-  <meta name="description" content="DESCRIPTIONGOESHERE" />
+    <meta property="og:title" content="Map" />
+    <meta property="og:description" content="DESCRIPTIONGOESHERE" />
+    <meta property="og:image" src="../../images/inkImages/counter-space.png" />
+    <meta
+      property="og:url"
+      content="https://tendercircuits.ca/home/work/counter-space"
+    />
+    <meta property="og:type" content="webpage" />
 
-  <meta property="og:title" content="Map" />
-  <meta property="og:description" content="DESCRIPTIONGOESHERE" />
-  <meta property="og:image" src="../../images/inkImages/counter-space.png" />
-  <meta property="og:url" content="https://tendercircuits.ca/home/work/counter-space" />
-  <meta property="og:type" content="webpage" />
+    <meta name="twitter:title" content="Map" />
+    <meta name="twitter:description" content="DESCRIPTIONGOESHERE" />
+    <meta name="twitter:image" src="../../images/inkImages/counter-space.png" />
+    <meta name="twitter:card" content="summary_large_image" />
 
-  <meta name="twitter:title" content="Map" />
-  <meta name="twitter:description" content="DESCRIPTIONGOESHERE" />
-  <meta name="twitter:image" src="../../images/inkImages/counter-space.png" />
-  <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      window.addEventListener("load", (event) => {
+        document.body.classList.remove("preload");
+      });
+    </script>
+  </head>
 
-  <script>
-    window.addEventListener("load", (event) => {
-      document.body.classList.remove("preload");
-    });
-  </script>
-</head>
-
-<body class="preload">
-  <header>
-    <div id="nameAndLogo">
-      <a href="../../indexx">
-        <figure>
-          <img src="../../images/inkImages/top-right-logo.png" id="indexImage"
-            alt="A brown watercolour painting in the shape of a backwards b" />
-          <figcaption id="siteName">Tender Circuits</figcaption>
-        </figure>
-      </a>
-    </div>
-  </header>
-
-  <main class="container">
-    <div class="contentContainer">
-      <div id="area">
-        <div class="thing">Thing</div>
-        <div class="thing">Thing</div>
-        <div class="thing">Thing</div>
-        <button id="button">Add</button>
+  <body class="preload">
+    <header>
+      <div id="nameAndLogo">
+        <a href="../../indexx">
+          <figure>
+            <img
+              src="../../images/inkImages/top-right-logo.png"
+              id="indexImage"
+              alt="A brown watercolour painting in the shape of a backwards b"
+            />
+            <figcaption id="siteName">Tender Circuits</figcaption>
+          </figure>
+        </a>
       </div>
-      
-      </div>
+    </header>
 
+    <main class="container">
+      <div class="contentContainer">
+        <div id="area">
+          <div class="thing">stuff</div>
+        </div>
+        <div id="button-box">
+          <button id="button" class="learn-more">get</button>
+        </div>
+      </div>
     </main>
-  <script type="text/javascript" src="play.js"></script>
-</body>
+    <script type="text/javascript" src="play.js"></script>
+  </body>
 </html>
