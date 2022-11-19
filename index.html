@@ -4,7 +4,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="reset.css" rel="stylesheet" type="text/css" />
   <link href="styles.css" rel="stylesheet" type="text/css" />
+
   <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet" />
   <title>Tender Circuits</title>
 
@@ -35,13 +37,14 @@
   </script>
 </head>
 
+<body class="preload">
   <header>
     <div id="nameAndLogo">
       <a href="home/indexx">
-        <figure>
+        <!-- <figure>
         <img src="home/images/inkImages/top-right-logo.png" id="indexImage" alt="A brown watercolour painting in the shape of a backwards b" />
         <figcaption id="siteName">Tender Circuits</figcaption>
-      </figure>
+      </figure> -->
       </a>
     </div>
   </header>
@@ -49,24 +52,25 @@
   <main class="container">
     <div class="contentContainer" id="landingPage">
       <!-- A static image of inkblot (no scrolling) -->
-      <img id="landingImg" src="home/images/inkImages/landing-page.png" alt="A watercolour abstract shape in blue and brown with the text 'let's get physical, 2020'" class="zimageSide fixedImage">
+      <img id="landingImg" class="pulse" src="home/images/inkImages/landing-page.png" alt="A watercolour abstract shape in blue and brown with the text 'let's get physical, 2020'" class="zimageSide fixedImage">
       <div class="textContainerInCaseINeedIt">
-        <h1 id="test">Tender Circuits</h1>
-        <h2>a community experiment</h2>
+        <h1 id="h1LandingPage">Tender Circuits</h1>
+        <h2 class="h2LandingPage">a community experiment</h2>
         <p>We invited artists to participate in immersive training on AR app development, in seminars with artists who each engage with site-specific interventions in their artistic practices and to examine the potential of mutually supportive exchanges between specific physical locations through the digital realm.</p>
-        <h2>mushroom is a verb</h2>
+        <h2 class="h2LandingPage">mushroom is a verb</h2>
         <p>Using the concept of fungal intelligence as a springboard, our artists were asked to consider the nature of the connections that encircle and extend a mycelial system and to investigate the possibility of applying fungal characteristics to human and more-than-human community building at the intersection of digital and physical spaces.</p><!-- List of artists -->
-        <h2>fruiting bodies</h2>
+        <h2 class="h2LandingPage">fruiting bodies</h2>
         <p>Galit Ariel, Pixie Cram, Erin Konsmo, Helen Lam, Kel MacDonald, Seth Thomson, Roberto Santaguida, Lauren Schaffer, Richard Moszka, and Vasuki Shanmuganathan.</p>
-        <div class="logoBox">
-          <!-- CCA logo -->
-          <a href="https://canadacouncil.ca/"><img src="home/images/logos/CCA-logo-bl.png" alt="an icon of a tree in a circle with infinity signs as the leaves with the text 'Canada Council for the Arts'" class="logo"></a>
-          <a href="https://digitalartsresourcecentre.ca/"><img src="home/images/logos/DARC-logo-bl.png" alt="The letter D divided in 4 sections with the text 'digital arts resource center'" class="logo"></a>
-        </div>
-        <a href="home/" class="btn">Begin</a>
+        
+        <a href="home/" id="beginBtn" class="btn gradient-hover-effect">Begin</a>
       </div>
     </div>
   </main>
+  <div class="logoBox">
+    <!-- CCA logo -->
+    <a href="https://canadacouncil.ca/"><img src="home/images/logos/CCA-logo-bl.png" alt="an icon of a tree in a circle with infinity signs as the leaves with the text 'Canada Council for the Arts'" class="logo"></a>
+    <a href="https://digitalartsresourcecentre.ca/"><img src="home/images/logos/DARC-logo-bl.png" alt="The letter D divided in 4 sections with the text 'digital arts resource center'" class="logo"></a>
+  </div>
   <script type="text/javascript" src="../../responsiveVideos.js"></script>
 </body>
 </html>
