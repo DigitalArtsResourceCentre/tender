@@ -147,3 +147,45 @@ h1 {
     width: auto;
   }
 }
+
+/* index h1  */
+
+.hc {
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	color: coral;
+}
+
+h2 {
+  font-family: Inconsolata, monospace;
+	font-size: 1.8rem;
+	text-transform: uppercase;
+	width: 515px;
+	height: 168px;
+}
+
+.char {
+	--offset: calc(var(--char-index) * 2rem);
+	offset-path: path('M.4 84.1s127.4 188 267.7 0 247.3 0 247.3 0');
+	offset-distance: var(--offset);
+	position: absolute;
+	animation: move2 1500ms infinite alternate forwards var(--delay, 0ms);
+}
+
+h2 {
+	&:nth-child(2) {
+		color: aquamarine;
+		
+		.char {
+			--delay: calc(var(--char-index) * 220ms);
+		}
+	}
+}
+
+
+@keyframes move2 {
+	100% {
+    offset-distance: calc(var(--offset) + 12rem);
+	}
+}
