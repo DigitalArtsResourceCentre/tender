@@ -86,3 +86,32 @@ function throttled(fn) {
 function clamp (value, min = 0, max = 1) {
   return value <= min ? min : value >= max ? max : value;
 }
+
+// new stuff
+
+
+let me = document.getElementById("me");
+console.log(me);
+
+function over() {
+  this.timeout = window.setTimeout(function () {
+    console.log('here')
+  }, 100)
+}
+
+function left() {
+  if (this.timeout) window.clearTimeout(this.timeout)
+}
+
+me.addEventListener('mouseenter', over);
+me.addEventListener('mouseleave', left);
+
+
+// document.querySelector('div.avatar-with-data, .q-item-avatar').hover(function(){
+//     tOut = setTimeout(function(){
+//         document.querySelector(this).querySelector('div.user-data').fadeIn('fast');
+//     },5000);
+// },function(){
+//     clearTimeout(tOut);
+//     document.querySelector(this).querySelector('div.user-data').fadeOut('fast');
+// });
