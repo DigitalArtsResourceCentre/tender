@@ -1,7 +1,7 @@
 var canvas = document.querySelector( 'canvas' );
 var context = canvas.getContext( '2d' );
 
-let rotationSpeed = 0.9;
+let rotationSpeed = 0.009;
 
 
 var step = 0;
@@ -26,7 +26,7 @@ boom();
 
 function color() {
   console.log(rotationSpeed);
-  // rotationSpeed = 0;
+  rotationSpeed = rotationSpeed * 2;
   console.log(rotationSpeed);
   colorIndex = ( ++colorIndex ) % colors.length;
   canvas.style.backgroundColor = colors[colorIndex][0];
@@ -88,7 +88,7 @@ function boom() {
       var distanceFromCenter = Math.sqrt( dx*dx + dy*dy ) / Math.min( width, height );
 
       var rotationOffset = distanceFromCenter * 4;
-      var rotationSpeed = 0.009;
+      // var rotationSpeed = 0.009;
 
       // Move to cell
       context.save();
