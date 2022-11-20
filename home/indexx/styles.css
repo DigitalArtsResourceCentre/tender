@@ -119,7 +119,14 @@ h1 {
   margin: 0;
   padding: 1.55rem 0 0 0;
   /* animation: pulse infinite alternate 0.9s; */
+  letter-spacing: .15rem;
+  transition: all 2s ease;
 
+}
+
+h1:hover {
+  letter-spacing: 0.5rem;
+  transition: all 5s ease;
 }
 
 .indexType{
@@ -141,12 +148,14 @@ h1 {
   /* color: pink; */
   z-index: 22;
   position: relative;
+  letter-spacing: 0.1rem;
+  transition: letter-spacing 1s ease;
 }
 
 @media screen and (min-width: 900px) {
   .indexItem,
 .indexType { 
-  opacity: 0.2;
+  opacity: 0.3;
 }
 
 .indexItem{
@@ -166,6 +175,8 @@ h1 {
   outline: none;
   border: var(--white);
   border-width: 0px;
+  /* letter-spacing: .13rem; */
+  /* transition: letter-spacing 1s ease; */
 }
 
 @media (min-width: 60rem) {
