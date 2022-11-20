@@ -86,6 +86,8 @@ window.addEventListener('keypress', (e) => {
             letterState[i].active = true
         }, 100 * count))
 
+        lasttyped = 0;
+
     }, 2000)
 })
 
