@@ -36,8 +36,24 @@
 
 #h1LandingPage {
   color: hsla(56, 12%, 73%, 0.87);
-  text-shadow: #9d0707 2px 5px, #12294e 1px 0 10px;
+  font-size: 4rem;
+  text-shadow: #153e3098 2px 5px, #1b4637 1px 0 5px;
+  letter-spacing: .25rem;
     /* position: absolute; */
+    transition: all 2s ease;
+}
+
+@media screen and (min-width: 900px) {
+
+#h1LandingPage {
+  font-size: 6rem;
+}
+}
+
+#h1LandingPage:hover {
+  letter-spacing: .5rem;
+  transition: all 5s ease;
+
 }
 
 /***********************/
@@ -89,6 +105,11 @@ body {
 
 .textContainerInCaseINeedIt {
   padding-bottom: 8rem ;
+}
+
+.textContainerInCaseINeedItSmallPad {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 p {
@@ -173,14 +194,14 @@ btn:focus {
 
 #beginBtn{
   /* background-image: radial-gradient(circle, #446c6e 0%, #3e6669 51%, #050f1e 100%); */
-  margin-bottom: 10rem;
+  /* margin-bottom: 10rem; */
 }
 
 .gradient-hover-effect {
   display: flex;
   padding: 0.875em 2em;
   /* background-image: radial-gradient(circle, #446c6e 0%, #3e6669 51%, #050f1e 100%); */
-  background: linear-gradient(90deg, #1a5256, transparent) #2196f3;
+  background: linear-gradient(90deg, #1a5256, transparent) #41686b; 
   text-decoration: none;
   transition: background-color 1s;
   place-content: center;
@@ -255,7 +276,16 @@ img {
   /* max-height: auto; */
   /* max-height: 50vh; */
   text-shadow: #9d0707 2px 5px, #12294e 1px 0 10px;
+  transform: rotate(6deg);
+  transition: all 2s ease;
+}
 
+#landingImg:hover {
+  -webkit-transition: all 3s ease-in-out;
+  filter: hue-rotate(90deg);
+  transform: rotate(0deg);
+
+  transition: all 2s ease;
 }
 
 @media (min-width: 60rem) {
@@ -335,9 +365,15 @@ h1:hover {
 
 h2 {
   color: var(--accentMed);
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 400;
   margin: 1em .1em 0.75em .1em;
+}
+
+@media screen and (min-width: 900px) {
+  h2 {
+    font-size: 2rem;
+  }
 }
 
 .h2LandingPage{
@@ -747,6 +783,10 @@ nav a {
   }
 }
 
+
+
+
+
 /***********************/
 /******* FOOTER ********/
 /***********************/
@@ -760,4 +800,11 @@ footer {
 }
 
 @media screen and (min-width: 900px) {
+}
+
+
+@keyframes pulse {
+  to {
+    transform: scale(0.69);
+ }
 }

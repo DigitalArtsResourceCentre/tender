@@ -98,6 +98,11 @@ head::after {
   padding:0;
 }
 
+/* .textContainerInCaseINeedIt {
+  margin: 0 0 1rem 0;
+  padding: 0 0 1rem 0;
+} */
+
 
 .indexTypeContainer, .indexItemContainer {
   display: flex;
@@ -109,14 +114,24 @@ head::after {
 
 h1 {
   font-size: 2rem;
+  z-index: 22;
+  position: relative;
+  margin: 0;
+  padding: 1.55rem 0 0 0;
+  /* animation: pulse infinite alternate 0.9s; */
+
+}
+
+.indexType{
+  background-color: rgba(157, 208, 255, 0.453);
 }
 
 .indexItem,
 .indexType {
-  opacity: 0.2;
+  opacity: 0.7;
   text-decoration: none;
   text-transform: uppercase;
-  margin: 1rem;
+  margin: .75rem;
   padding: 0.2em .2em;
   outline: none;
   border: none;
@@ -126,6 +141,12 @@ h1 {
   /* color: pink; */
   z-index: 22;
   position: relative;
+}
+
+@media screen and (min-width: 900px) {
+  .indexItem,
+.indexType { 
+  opacity: 0.2;
 }
 
 .indexItem{
