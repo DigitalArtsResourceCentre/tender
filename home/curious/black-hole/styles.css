@@ -1,6 +1,37 @@
-html, body {
+@font-face {
+  font-family: 'dejavu_sans_monobook';
+  src: url('DejaVuSansMono.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
   overflow: hidden;
   background: #111;
+}
+
+.container {
+  padding-top: 0;
+}
+
+.contentContainer {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+#spiralContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  color: white;
+  font-family: 'dejavu_sans_monobook', monospace;
+  font-size: 20px;
+}
+
+#textInput {
+  color: white;
 }
 
 .hole {
@@ -71,14 +102,33 @@ i:nth-child(10) {
     opacity: 0;
     box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.5);
   }
+
   50% {
     transform: scale(1) translate(0px, -5px);
     opacity: 1;
     box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.5);
   }
+
   100% {
     transform: scale(0.1) translate(0px, 5px);
     opacity: 0;
     box-shadow: 0px 10px 20px rgba(255, 255, 255, 0);
+  }
+}
+
+
+.fade-out {
+  animation: fadeOut ease 0.2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
   }
 }
