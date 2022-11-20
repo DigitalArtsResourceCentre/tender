@@ -12,6 +12,20 @@ body, head {
   /* font-size: 10rem; */
 }
 
+p {
+  padding: 0.2rem;
+  line-height: 1.2;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 900px) {
+  p {
+    padding: 0.1rem;
+    line-height: 1;
+    font-size: 1rem;
+  }
+}
+
 
 head::before, head::after,
 body::before, body::after {
@@ -116,17 +130,17 @@ h1 {
   font-size: 2rem;
   z-index: 22;
   position: relative;
-  margin: 0;
+  margin: 0 0 1rem 0;
   padding: 1.55rem 0 0 0;
   /* animation: pulse infinite alternate 0.9s; */
-  letter-spacing: .15rem;
+  /* letter-spacing: .15rem; */
   transition: all 2s ease;
 
 }
 
-h1:hover {
-  letter-spacing: 0.5rem;
-  transition: all 5s ease;
+IndexH1:hover {
+  letter-spacing: inherit;
+  margin: inherit;
 }
 
 .indexType{
@@ -184,10 +198,4 @@ h1:hover {
   .indexType {
     width: auto;
   }
-}
-
-p {
-  padding: 0;
-  line-height: 1.75;
-  font-size: .5rem;
 }

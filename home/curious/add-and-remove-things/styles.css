@@ -17,6 +17,7 @@ body {
   text-align: center;
   margin: 0 0 4px 0;
   background: #c2185b;
+  flex-basis: 15%; width: 10%;
 
   /* translate: 20px; */
   /* animation: 0.66s 1 ease incoming forwards; */

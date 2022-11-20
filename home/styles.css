@@ -19,10 +19,16 @@
   animation-play-state: paused;
   opacity: 0.9;
   margin: 0;
+  display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .item img {
   animation-iteration-count: infinite;
+  position: relative;
+
 }
 
 .item a {
@@ -30,15 +36,21 @@
   text-decoration: none;
 }
 
-.item_text {
-  padding: 0;
-  margin: 0;
-  margin-bottom: 5px;
+h1 {
+  padding:0;
+  margin:0;
 }
 
 .item_title {
   font-size: 1.25rem;
   letter-spacing: 0.1em;
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+
 }
 
 .item_image {
@@ -77,8 +89,20 @@ path {
   fill: transparent;
 }
 
+
 text {
-  fill: rgb(83, 247, 154);
+  fill: rgba(83, 247, 154, 0.6);
+  /* letter-spacing: .5rem; */
+  transition: all 1s ease-in-out;
+
+}
+
+text:hover {
+  fill: pink;
+  /* font-size: 1rem; */
+  text-shadow: rgb(65 104 107 / 45%) 0.5rem 0.5rem, rgb(65 104 107 / 25%) 2px 2px, rgb(65 104 107 / 15%) 3px 1px;
+  /* letter-spacing: .25rem; */
+  transition: all 1s ease-in-out;
 }
 
 
@@ -94,8 +118,9 @@ text {
 @media (any-hover: hover) {
   .item:hover {
     z-index: 10;
-    width: 33rem;
-    width: 33rem;
+    /* transform: rotate(200deg); */
+        /* width: 33rem;
+    width: 33rem; */
     opacity: 1;
     transition: all 3s ease-in-out;
     animation-play-state: paused !important;

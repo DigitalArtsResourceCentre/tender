@@ -8,8 +8,6 @@ function showPage() {
 
 let isLocationSet = false;
 
-// arrays
-
 let rotate = "rotate";
 
 let directions = ["top", "bottom", "left", "right"];
@@ -184,3 +182,18 @@ function setAnimationForEachItem(i) {
 }
 
 checkIfIveSeenThisItemBefore();
+
+
+
+
+// for (i = 0; i < items.length; i++) {
+//   (items[i]).animated.style['animation-play-state'] = 'paused';
+// }
+
+// var dur = 50;
+// document.querySelectorAll('.item').forEach(el=>{
+//   var t;
+//   el.addEventListener('mouseover',_=>{t = performance.now();el.style.animationPlayState = 'running'})
+//   el.addEventListener('mouseout',_=>window.setTimeout(()=>el.style.animationPlayState = 'paused',dur-(performance.now()-t)%dur));
+// })
+
