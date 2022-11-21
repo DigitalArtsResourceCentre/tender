@@ -9,6 +9,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   max-height: 80vh;
+
 }
 .thing {
   color: white;
@@ -16,8 +17,9 @@ body {
   /* border-radius: 100px; */
   text-align: center;
   /* margin: 0 0 4px 0; */
-  background: #5118c293;
   flex-basis: 20%;
+  background-image: url("../../images/inkImages/top-right-logo.png");
+  background: #5118c293;
 
   /* translate: 20px; */
   /* animation: 0.66s 1 ease incoming forwards; */

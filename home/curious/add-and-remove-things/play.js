@@ -3,7 +3,7 @@ myButt = document.querySelector('#button')
 button.addEventListener("click", () => {
   let children = document.getElementById("area");
   if (area.childElementCount < 55) {
-    area.insertAdjacentHTML("afterBegin", `<div class="thing">stuff</div>`);
+    area.insertAdjacentHTML("afterBegin", `<div class="thing">STUFF</div>`);
   } else {
     console.log("you got all the stuff!");
     myButt.textContent = 'NO MORE STUFF';
@@ -17,7 +17,6 @@ area.addEventListener("click", (e) => {
   myButt.textContent = 'get stuff';
   myButt.classList.add("learn-more");
 });
-
 
    // buttonBox.removeChild(button);
     // const newbutton = document.createElement("button"); 
