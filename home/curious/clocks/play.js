@@ -34,9 +34,9 @@ window.addEventListener('resize', () => {
 })
 
 function color() {
-  console.log(rotationSpeed);
-  rotationSpeed = rotationSpeed * 2;
-  console.log(rotationSpeed);
+  // console.log(rotationSpeed);
+  // rotationSpeed = rotationSpeed * 2;
+  // console.log(rotationSpeed);
   colorIndex = (++colorIndex) % colors.length;
   canvas.style.backgroundColor = colors[colorIndex][0];
   // boom();
