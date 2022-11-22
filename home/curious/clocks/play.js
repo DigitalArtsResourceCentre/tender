@@ -7,6 +7,7 @@ let mousePos = vec2.fromValues(0, 0);
 let hoveredClock = null;
 
 let clockPositions = []
+let sqrdRadius = 0;
 
 var step = 0;
 var colorIndex = -1;
@@ -25,13 +26,6 @@ var colors = [
 document.ontouchstart = color;
 document.onmousedown = color;
 
-color();
-boom();
-
-window.addEventListener('resize', () => {
-  clockPositions = [];
-  console.log(clockPositions);
-})
 
 function color() {
   // console.log(rotationSpeed);
@@ -46,13 +40,53 @@ function isHoveredClock(x, y) {
   return hoveredClock && hoveredClock.cell.x == x && hoveredClock.cell.y == y
 }
 
-function boom() {
-  var width = window.innerWidth,
-    height = window.innerHeight;
 
-  var vmin = Math.min(width, height) / 100;
+function throttled(fn) {
+  let didRequest = false;
+  return param => {
+    if (!didRequest) {
+      window.requestAnimationFrame(() => {
+        fn(param);
+        didRequest = false;
+      });
+      didRequest = true;
+    }
+  };
+}
 
-  var dpr = window.devicePixelRatio;
+var width, height;
+
+var vmin;
+
+var dpr;
+
+// Cell size + spacing
+var cellSize;
+var cellSpacing;
+var cellSizeWithSpacing;
+
+// Clock hands
+var longHandLength;
+var shortHandLength;
+var thickness;
+
+// Margin around the screen edge
+var margin;
+
+var cols, rows;
+
+var ox, oy;
+
+
+function setDimensionsVar() {
+  clockPositions = [];
+
+  width = window.innerWidth;
+  height = window.innerHeight;
+
+  vmin = Math.min(width, height) / 100;
+
+  dpr = window.devicePixelRatio;
   if (dpr > 1) {
     width *= dpr;
     height *= dpr;
@@ -63,17 +97,35 @@ function boom() {
   canvas.height = height;
 
   // Cell size + spacing
-  var cellSize = vmin * 18;
-  var cellSpacing = cellSize * 0.3;
-  var cellSizeWithSpacing = cellSize + cellSpacing;
+  cellSize = vmin * 18;
+  cellSpacing = cellSize * 0.3;
+  cellSizeWithSpacing = cellSize + cellSpacing;
+
+
+  sqrdRadius = Math.pow(cellSize / 2, 2)
+
+  console.log("sqrdRadius", Math.sqrt(sqrdRadius));
 
   // Clock hands
-  var longHandLength = cellSize * 0.4;
-  var shortHandLength = cellSize * 0.25;
-  var thickness = Math.round(longHandLength / 18);
+  longHandLength = cellSize * 0.4;
+  shortHandLength = cellSize * 0.25;
+  thickness = Math.round(longHandLength / 18);
 
   // Margin around the screen edge
-  var margin = vmin;
+  margin = vmin;
+
+  cols = Math.floor((width - margin * 2) / cellSizeWithSpacing);
+  rows = Math.floor((height - margin * 2) / cellSizeWithSpacing);
+
+  ox = (width - (cols * cellSizeWithSpacing) + cellSpacing) / 2;
+  oy = (height - (rows * cellSizeWithSpacing) + cellSpacing) / 2;
+}
+
+setDimensionsVar();
+window.addEventListener('resize', setDimensionsVar)
+
+
+function boom() {
 
   context.lineJoin = 'round';
   context.lineCap = 'round';
@@ -82,12 +134,6 @@ function boom() {
   context.clearRect(0, 0, width, height);
 
   step += 1;
-
-  var cols = Math.floor((width - margin * 2) / cellSizeWithSpacing),
-    rows = Math.floor((height - margin * 2) / cellSizeWithSpacing);
-
-  var ox = (width - (cols * cellSizeWithSpacing) + cellSpacing) / 2,
-    oy = (height - (rows * cellSizeWithSpacing) + cellSpacing) / 2;
 
   for (var x = 0; x < cols; x++) {
     for (var y = 0; y < rows; y++) {
@@ -109,7 +155,6 @@ function boom() {
       if (clockPositions.length < (cols * rows)) {
         let clockPos = vec2.fromValues(px + cellSize / 2, py + cellSize / 2);
         clockPositions.push({ screenPos: clockPos, cell: { x, y } })
-        console.log(clockPositions[clockPositions.length - 1]);
       }
 
       const hovered = isHoveredClock(x, y);
@@ -151,43 +196,28 @@ function boom() {
   }
 
   requestAnimationFrame(boom);
-
-
-  function handleMouseMove(e) {
-    vec2.set(mousePos, e.clientX, e.clientY);
-
-    let hasOne = false;
-
-    for (let i = 0; i < clockPositions.length; i++) {
-      const dist = vec2.dist(mousePos, clockPositions[i].screenPos);
-
-      if (dist < cellSize / 2) {
-        hoveredClock = clockPositions[i];
-        hasOne = true;
-        break;
-      }
-    }
-
-    if (!hasOne) {
-      hoveredClock = null;
-    }
-  }
-
-
-  function throttled(fn) {
-    let didRequest = false;
-    return param => {
-      if (!didRequest) {
-        window.requestAnimationFrame(() => {
-          fn(param);
-          didRequest = false;
-        });
-        didRequest = true;
-      }
-    };
-  }
-
-  window.addEventListener('mousemove', throttled(handleMouseMove));
-
-
 }
+
+function handleMouseMove(e) {
+  vec2.set(mousePos, e.clientX, e.clientY);
+
+  let hasOne = false;
+
+  for (let i = 0; i < clockPositions.length; i++) {
+    const dist = vec2.sqrDist(mousePos, clockPositions[i].screenPos);
+
+    if (dist < sqrdRadius) {
+      hoveredClock = clockPositions[i];
+      hasOne = true;
+      break;
+    }
+  }
+
+  if (!hasOne) {
+    hoveredClock = null;
+  }
+}
+window.addEventListener('mousemove', throttled(handleMouseMove));
+
+color();
+boom();
