@@ -1,3 +1,7 @@
+.container {
+  padding-top: 0;
+}
+
 .eye {
   --pupil-x: 0;
   --pupil-y: 0;
