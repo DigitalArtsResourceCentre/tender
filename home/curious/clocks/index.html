@@ -4,17 +4,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link href="../../../reset.css" rel="stylesheet" type="text/css" />
-  <link href="../../../styles.css" rel="stylesheet" type="text/css" /> <link href="reset.css" rel="stylesheet" type="text/css" />
+  <link href="../../../reset.css" rel="stylesheet" type="text/css" />
+  <link href="../../../styles.css" rel="stylesheet" type="text/css" />
+  <link href="reset.css" rel="stylesheet" type="text/css" />
   <link href="styles.css" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet" />
-  <title>Map</title>
+  <title>Who told you there's no time?</title>
 
   <meta name="author" content="Marie Claire LeBlanc Flanagan" />
-  <meta name="description" content="DESCRIPTIONGOESHERE" />
 
-  <meta property="og:title" content="Map" />
-  <meta property="og:description" content="DESCRIPTIONGOESHERE" />
+  <meta property="og:title" content="Who told you there's no time?" />
   <meta property="og:image" src="../../images/inkImages/counter-space.png" />
   <meta property="og:url" content="https://tendercircuits.ca/home/work/counter-space" />
   <meta property="og:type" content="webpage" />
@@ -46,23 +45,27 @@
 
   <main class="container">
     <div class="contentContainer">
-
+      <div id="clocksContainer">
+      </div>
       <div id="wrap">
         <svg id="ellipse" version="1.1" viewBox="0 0 1000 1000">
-        <path id="thePath" fill="transparent" d="M100,500A400,400 0 0 0 900 500 A400,400 0 0 0 100 500"  />
-           <text stroke="white" fill="white">
-              <textPath xlink:href="#thePath" dy="5" id="tp" lengthAdjust="spacingAndGlyphs"> who told you there's no time? • who told you there's no time? • who told you there's no time? •</textPath>
-            </text>
+          <path id="thePath" fill="transparent" d="M100,500A400,400 0 0 0 900 500 A400,400 0 0 0 100 500" />
+          <text stroke="white" fill="white">
+            <textPath xlink:href="#thePath" dy="5" id="tp" lengthAdjust="spacingAndGlyphs" startOffset="0%"> who told
+              you there's no
+              time? • who told you there's no time? • who told you there's no time? •
+              <animate attributeName="startOffset" repeatCount="indefinite" from="0%" to="50%" dur="60s" />
+            </textPath>
+            <path id="kki"></path>
+
+          </text>
+
         </svg>
-    </div>
-
-      <canvas></canvas>
-      
       </div>
-
-    </main>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"></script>
-    <script type="text/javascript" src="marquee.js"></script>
-  <script type="text/javascript" src="play.js"></script>
+    </div>
+  </main>
+  <script src="play.js"></script>
+  <script src="marquee.js"></script>
 </body>
+
 </html>

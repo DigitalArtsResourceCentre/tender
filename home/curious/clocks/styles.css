@@ -6,38 +6,112 @@ body {
 
 body {
   display: flex;
-  background-color: #fff;
-}
-
-canvas {
-  margin: auto;
-  width: 100%;
-  height: 100%;
+  background: #5f0c56;
 }
 
 .container {
   padding-top: 0;
+  width: 100%;
+  height: 100%;
 }
 
-@media screen and (min-width: 900px) {
-  .container {
-    padding-top: 0;
+.contentContainer {
+  height: 100%;
+  width: 100%;
+}
+
+/* circle text  */
+
+#wrap {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+text {
+  text-transform: uppercase;
+  font-weight: lighter;
+  text-rendering: optimizeSpeed;
+}
+
+/* clocks */
+
+#clocksContainer {
+  padding-left: var(--padding);
+  height: 100%;
+  width: calc(100% - (var(--padding) * 2));
+  /* display: grid;
+  grid-template-columns: auto auto auto; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  --clockStrokeColor: #964ec9;
+}
+
+.clockContainer {
+  position: relative;
+  /* width: 170px;
+  height: 170px; */
+  /* margin-left: 15px;
+  margin-right: 15px; */
+}
+
+.clock {
+  height: 100%;
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: none;
+  stroke: var(--clockStrokeColor);
+  --speedMultiplier: 2;
+}
+
+.clock:hover {
+  stroke: pink;
+  animation-play-state: running;
+}
+
+.slowDown {
+  transform-box: view-box;
+  transform-origin: center;
+  animation: slowDown var(--slowDownSpeed) linear infinite;
+  animation-play-state: paused;
+}
+
+.clock:hover .slowDown {
+  animation-play-state: running;
+}
+
+.clockHand {
+  transform-box: view-box;
+  transform-origin: center;
+  animation: clock calc((1s / var(--speedMultiplier)) * var(--revolutionTime)) linear infinite;
+  animation-delay: var(--timeOffset);
+}
+
+@keyframes slowDown {
+  from {
+    transform: rotateZ(0deg)
+  }
+
+  to {
+    transform: rotateZ(-360deg)
   }
 }
 
 
+@keyframes clock {
+  from {
+    transform: rotateZ(0deg)
+  }
 
-
-/* circle text  */
-
-#wrap{
-  width:100%;
-  height:100%;
-  position: fixed;
-  top: 0;
-  left: 0;  
-}
-text {
-  text-transform: uppercase;
-  font-weight: lighter;
+  to {
+    transform: rotateZ(360deg)
+  }
 }
