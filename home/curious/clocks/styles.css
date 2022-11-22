@@ -80,7 +80,7 @@ text {
 .slowDown {
   transform-box: view-box;
   transform-origin: center;
-  animation: slowDown var(--slowDownSpeed) linear infinite;
+  animation: slowDown calc(8 * var(--slowDownSpeed)) linear infinite;
   animation-play-state: paused;
 }
 
@@ -91,7 +91,7 @@ text {
 .clockHand {
   transform-box: view-box;
   transform-origin: center;
-  animation: clock calc((1s / var(--speedMultiplier)) * var(--revolutionTime)) linear infinite;
+  animation: clock calc(8 * ((1s / var(--speedMultiplier)) * var(--revolutionTime))) linear infinite;
   animation-delay: var(--timeOffset);
 }
 
