@@ -59,7 +59,7 @@ fetch("instinct.json")
 
     function drawThing(thing) {
       const { pos, radius } = thing;
-      ctx.fillStyle = '#000057';
+      ctx.fillStyle = '#420970';
       ctx.beginPath();
       ctx.arc(pos[0], pos[1], radius, 0, Math.PI * 2);
       ctx.fill();

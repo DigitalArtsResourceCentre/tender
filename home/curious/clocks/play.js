@@ -16,7 +16,7 @@ const clock = `<div class="clockContainer">
 xmlns="http://www.w3.org/2000/svg">
 <circle cx="22.972853" cy="22.972855" r="22.380854" stroke-width="0" fill="transparent" />
 <circle cx="22.972853" cy="22.972855" r="22.380854" stroke-width="1.18400002" />
-<g class="slowDown" style="--slowDownSpeed : 0.65s">
+<g class="slowDown" style="--slowDownSpeed : 0.52s">
 <path class="clockHand" style="--revolutionTime: 1" d="m8.04279 32.800247 14.93021-9.82754"
   stroke-linecap="round" stroke-linejoin="round" stroke-width="1.46500015" />
   </g>
@@ -125,14 +125,14 @@ for (let i = 0; i < cols * rows; i++) {
 var colorIndex = 0;
 var colors = [
   ['#5f0c56', '#964ec9'],
-  ['#101e62', '#7675e7'],
+  // ['#101e62', '#7675e7'],
   // [ '#f9844a', '#e6e6e6' ],
   // [ '#f9c74f', '#e24c68' ],
   // [ '#90be6d', '#1666bd' ],
   // [ '#43aa8b', '#e55256' ],
   // [ '#4d908e', '#1790d0' ],
   // [ '#577590', '#1790d0' ],
-  ['#277da1', '#1790d0']
+  ['#5f0c56', '#803fae']
 ];
 
 

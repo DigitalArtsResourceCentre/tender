@@ -169,7 +169,7 @@ IndexH1:hover {
 @media screen and (min-width: 900px) {
   .indexItem,
 .indexType { 
-  opacity: 0.3;
+  opacity: 0.6;
 }
 
 .indexItem{

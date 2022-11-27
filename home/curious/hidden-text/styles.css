@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 .container {
   padding-top: 11%;
 }
@@ -19,7 +21,10 @@
 
 .word {
   --fadeOutDelay: 1;
-  --fadeOutDuration: 1;
+  --fadeOutDuration: 1.7;
+  color: rgb(237, 198, 255);
+  font-family: 'VT323', monospace;
+
 }
 
 .fade-out {
@@ -52,13 +57,18 @@ h1 {
 body {
   min-height: 100vh;
   background: var(--fg);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
   overflow: hidden;
+}
+
+#indexImage{
+  padding-top: 2rem;
+  margin-top: 2rem;
 }
 
 :root {
   --bg: #7700ff7a;
-  --fg: #5b009c;
+  --fg: #6a08af;
 }
