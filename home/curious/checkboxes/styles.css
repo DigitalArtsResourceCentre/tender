@@ -10,6 +10,17 @@ body {
   font-family: 'VT323', monospace;
 }
 
+.container {
+  z-index: 10;
+}
+
+canvas {
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: -1;
+}
+
 body:has(.one:checked):has(.two:checked):has(.three:checked) .message::after {
   content: "You've won! How does it feel?";
 }
