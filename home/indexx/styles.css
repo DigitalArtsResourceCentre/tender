@@ -76,7 +76,7 @@ head::after {
 /* ////     Index    /// */
 /* ///////////////////// */
 
-.resistance {
+/* .resistance {
   background-color: rgba(182, 182, 126, 0.304);
 }
 
@@ -106,10 +106,47 @@ head::after {
 
 .spheres {
   background-color: rgba(210, 188, 226, 0.342);
+} */
+
+
+.resistance {
+  background-color: rgb(182, 182, 126);
+}
+
+.hyphae {
+  background-color: rgb(198, 170, 145);
+}
+
+.passages {
+  background-color:  rgb(183, 160, 255);
+}
+
+.structures {
+  background-color: rgb(143, 184, 143);
+}
+
+.layers {
+  background-color: rgb(211, 169, 169);
+}
+
+.clusters {
+  background-color: rgb(205, 166, 205);
+}
+
+.landscapes {
+  background-color: rgb(177, 203, 199);
+}
+
+.spheres {
+  background-color: rgb(210, 188, 226);
 }
 
 .container{
   padding:0;
+}
+
+.resistance, .hyphae, .passages, .structures, .layers, .clusters, .landscapes, .spheres, .container {
+  /* opacity: .5; */
 }
 
 /* .textContainerInCaseINeedIt {
@@ -164,12 +201,13 @@ IndexH1:hover {
   position: relative;
   letter-spacing: 0.1rem;
   transition: letter-spacing 1s ease;
+  padding: 5px;
 }
 
 @media screen and (min-width: 900px) {
   .indexItem,
 .indexType { 
-  opacity: 0.6;
+  opacity: 0.3;
 }
 
 .indexItem{

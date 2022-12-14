@@ -120,6 +120,10 @@ p {
   color: #04191b;
 }
 
+.credit {
+  text-align: center;
+}
+
 .shortDesc {
   font-style: italic;
 }
