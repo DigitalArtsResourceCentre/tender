@@ -31,8 +31,21 @@
     window.addEventListener("load", (event) => {
       document.body.classList.remove("preload");
     });
-  </script>
-</head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-YMPRW9QFGJ"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-YMPRW9QFGJ");
+    </script>
+  </head>
 
 <body class="preload">
   <header>
