@@ -120,6 +120,25 @@ p {
   color: #04191b;
 }
 
+.hintBox {
+  z-index: 100;
+  position: fixed;
+  left: 50%;
+  bottom: 5px;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  color: rgba(206, 199, 206, 0.9);
+  transition: all 10s;
+
+}
+
+.hintBox:hover:before {
+  transition: all 1s;
+  content: "type, then wait";
+}
+
+
+
 .credit {
   text-align: center;
 }

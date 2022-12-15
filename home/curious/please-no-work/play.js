@@ -4,15 +4,16 @@ const context = canvas.getContext('2d');
 const lines = [];
 
 const colors = [
-['#4f3a4b', '#e55256'],
-['#fff', '#111'],
-['#e37169', '#26282a'],
-['#eed87b', '#28292b'],
-['#0d5b5c', '#e6e6e6'],
-['#d4e8e1', '#e24c68'],
-['#fbfc65', '#1666bd'],
-['#f3c8ed', '#1790d0'],
-['#111', '#fff']];
+  ['#5353d6', '#0000ff'],
+  ['#54acc8', '#00bfff'],
+  ['#00b8d4', '#00f0ff'],
+  ['#006064', '#00e5ff'],
+  ['#00e5ff', '#00bcd4'],
+  ['#00b8d4', '#00f0ff'],
+  ['#00bcd4', '#00ffff'],
+  ['#00acc1', '#00e5ff'],
+  ['#00b8d4', '#00ffff'],
+  ];
 
 
 var colorIndex = -1;
@@ -36,7 +37,7 @@ function setup() {
 
   lines.length = 0;
 
-  let lineCount = height / 26;
+  let lineCount = height / 16;
   let pointCount = 14;
   let spacingH = width / pointCount;
   let spacingV = height / lineCount;
@@ -67,6 +68,8 @@ function color() {
 
   colorIndex = ++colorIndex % colors.length;
   canvas.style.backgroundColor = colors[colorIndex][0];
+//   let bullets = document.getElementById("");
+//   bullets.style.backgroundColor = colors[colorIndex][0];
 
 }
 
