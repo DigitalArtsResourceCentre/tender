@@ -398,6 +398,14 @@ headshotdiv {
   flex-grow: 1;
 }
 
+.hmaterials {
+  width: 50vw;
+}
+
+.materialsForceWide {
+  width: 100vw;
+}
+
 /***********************/
 /******* HEADERS *******/
 /***********************/
@@ -796,7 +804,6 @@ nav a {
   padding: 0;
   flex-wrap: wrap;
   justify-content: space-between;
-  /* align-content: center; */
 }
 
 /***********************/
